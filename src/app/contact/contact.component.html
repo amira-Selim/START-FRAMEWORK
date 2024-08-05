@@ -1,0 +1,40 @@
+<div class="container-fluid">
+    <div class="mb-3">
+        <app-star>
+            <h2 class="text-uppercase mb-3 fs-1 fw-bolder textC">CONATCT SECTION</h2>
+            <div class="d-flex align-items-center justify-content-center mb-3">
+                <div class="line me-3 bg-white d-block"> </div>
+                <i class="fa-solid fa-star textC"></i>
+                <div class="line ms-3 bg-white"> </div>
+            </div>
+        </app-star>
+    </div>
+    <div class="container ">
+
+        <form class="w-50 p-3 mx-auto mt-5   ">
+            <label #lable1 for="userName" class=" label position-relative top-0 move ">userName : 
+            </label>
+            <input id="userName" type="text" placeholder="userName" name="userName" class="input form-control border-0 border-bottom py-3 position-relative  " (input)="viweLabel($event.target , 'name')">
+    
+    
+            <label #lable2 for="userEmail" class=" label position-relative top-0 move ">userEmail : 
+            </label>
+            <input id="userEmail" type="text" placeholder="userEmail" name="userEmail" class="input form-control border-0 border-bottom py-3 position-relative  " (input)="viweLabel($event.target ,'email')">
+    
+    
+            <label #lable3 for="userPassword" class=" label position-relative top-0 move ">userPassword :  
+            </label>
+            <input id="userPassword" type="text" placeholder="userPassword" name="userPassword" class="input form-control border-0 border-bottom py-3 position-relative  " (input)="viweLabel($event.target ,'pass')">
+    
+    
+            <label #lable4 for="userAge" class=" label position-relative top-0 move ">userAge :
+            </label>
+            <input id="userAge" type="text" placeholder="userAge" name="userAge" class="input form-control border-0 border-bottom py-3 position-relative  " (input)="viweLabel($event.target ,'age' )  ">
+    
+    
+                <button class="btn mt-4 text-white" style="background-color: #1abc9c;">
+                     send Message
+                 </button>
+        </form>
+    </div>
+    </div>

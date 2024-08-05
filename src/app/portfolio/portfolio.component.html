@@ -1,0 +1,37 @@
+<div class="container-fluid ">
+    <div class="">
+        <app-star>
+            <h2 class="text-uppercase mb-3 fs-1 fw-bolder textC">PORTFOLIO COMPONENT</h2>
+            <div class="d-flex align-items-center justify-content-center mb-3">
+                <div class="line me-3 bg-white d-block"> </div>
+                <i class="fa-solid fa-star textC"></i>
+                <div class="line ms-3 bg-white"> </div>
+            </div>
+        </app-star>
+
+        <div class="container">
+            <div class="row g-5 mb-4">
+                @for (img of portfolioList; track $index) {
+                    <div class="col-md-4">
+                       <div class="card" (click)="showOverlayer(img.imageSrc);">
+                        <img [src]="img.imageSrc" [alt]="img.title" class="card-img" #myimg  >
+                        <div class="layer position-absolute start-0 w-100 top-0 h-100 d-flex justify-content-center align-items-center">
+                            <i class="text-white fa-solid fa-plus fa-6x"></i>
+                        </div>
+                       </div>
+                       
+                    </div>
+                }
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+
+    <div #overLayer  class="overLayer d-none align-items-center justify-content-center  " (click)="closeOverlayer($event.target);" >
+        <div #bgimg class="imgBox"  >
+             <img [src]="imgSrc" alt="" class="w-100">
+        </div>
+    </div>
